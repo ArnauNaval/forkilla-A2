@@ -1,0 +1,42 @@
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .checked {color: orange;}
+    </style>
+    <title>Reserva realitzada</title>
+</head>
+{% extends "forkilla/base.html" %}
+
+{% block content %}
+
+    {% if restaurant %}
+        <h2>S'ha fet una ressenya al restaurant {{ restaurant}}</h2>
+        <p><h><b>Username: </b><br>{{username}}</h></p>
+        <p><h><b>Message: </b><br>{{message}}</h></p>
+
+        <p style="margin-bottom: 0px"><h>
+            <b>Rate: </b>
+            <div id="myHTMLWrapper"> </div>
+            <div id = "rate" style="visibility: hidden">{{rate}}</div>
+        </h></p>
+
+        <script>
+          var wrapper = document.getElementById("myHTMLWrapper");
+          var rate = document.getElementById("rate").innerHTML;
+          var myHTML = '';
+
+          for (var i = 0; i < rate; i++) {
+            myHTML += '<span class="fa fa-star checked"></span>';
+          }
+          for(i = 0; i < 5-rate; i++){
+            myHTML += '<span class="fa fa-star"></span>';
+          }
+
+          wrapper.innerHTML = myHTML
+
+        </script>
+
+    {% endif %}
+
+
+{% endblock %}

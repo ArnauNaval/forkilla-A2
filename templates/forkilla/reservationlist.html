@@ -1,0 +1,53 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Llista de reserves</title>
+</head>
+
+{% extends "forkilla/base.html" %}
+
+{% block content %}
+    {% if not logged %}
+        <p>No estas logued jaja</p>
+    {% else %}
+        <h2>Hola {{ user }}! Aquestes son les teves reserves:</h2>
+
+        <h3><u>Reserves futures</u></h3>
+        {% if reservations %}
+            {% for reserva in reservations %}
+                <div class="content">
+                    <p><b>Restaurant:</b> {{ reserva.restaurant.name }}</p>
+                    <p><b>Dia:</b> {{ reserva.day }}</p>
+                    <p><b>Hora:</b> {{ reserva.get_human_slot }}</p>
+                    <p><b>Nº de persones:</b> {{ reserva.num_people }}</p>
+
+                    <form action="{% url 'cancellation'%}" method="get">
+                        <button type="submit" name="cancellation" value={{reserva.id}}> Cancel·la la reserva</button>
+	                </form>
+
+                </div>
+
+            {% endfor %}
+        {% else %}
+            <p>No tens reserves futures</p>
+        {% endif %}
+
+        <h3><u>Reserves anteriors</u></h3>
+        {% if old_reservations %}
+            {% for reserva in old_reservations %}
+                <div class="content">
+                    <p><b>Restaurant:</b> {{ reserva.restaurant.name }}</p>
+                    <p><b>Dia:</b> {{ reserva.day }}</p>
+                    <p><b>Hora:</b> {{ reserva.get_human_slot }}</p>
+                    <p><b>Nº de persones:</b> {{ reserva.num_people }}</p>
+
+                    <form action="{% url 'reviewBefore'%}" method="get">
+                         <button type="submit" name="review" value={{ reserva.id }}> Afegeix una ressenya</button>
+                    </form>
+                </div>
+
+            {% endfor %}
+        {% else %}
+            <p>No tens reserves pendents per valorar</p>
+        {% endif %}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,78 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Detalls del restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .checked {color: orange;}
+    </style>
+</head>
+
+{% extends "forkilla/base.html" %}
+{% block content %}
+
+    <!--forkilla/restaurant/{{restaurants.category }}/{{restaurants.name}}-->
+    {% if restaurants %}
+
+        <h2> {{restaurants.name}} </h2>
+        {% load static %}
+        {% if foto %}
+            <a>
+                <img src="{% static foto %}">
+            </a>
+        {% endif %}
+
+
+        <p> <b>Ciutat :</b> {{restaurants.city}} </p>
+        <p> <b>Numero :</b> {{restaurants.restaurant_number}} </p>
+        <p> <b>Menu :</b> {{restaurants.menu_description}} </p>
+        <p> <b>Preu mig :</b> {{restaurants.price_average}} </p>
+        <p> <b>Promocionat :</b> {{restaurants.is_promot}} </p>
+        <p> <b>Puntuacio :</b> {{restaurants.rate}} </p>
+        <p> <b>Categoria :</b> {{restaurants.category}} </p>
+        <p> <b>Adreça :</b> {{restaurants.address}} </p>
+        <p> <b>Pais :</b> {{restaurants.country}} </p>
+        <p>
+            <p id = "rate" style="visibility: hidden; height: 0px;margin: 0px">{{puntuacio}} </p>
+                <div id="myHTMLWrapper"></div>
+                <script>
+                  var wrapper = document.getElementById("myHTMLWrapper");
+                  var rate = document.getElementById("rate").innerHTML;
+                  var myHTML = '<b>Rate: </b>';
+                  for (var i = 0; i < rate; i++) {
+                    myHTML += '<span class="fa fa-star checked"></span>';
+                  }
+                  for(i = 0; i < 5-rate; i++) {
+                    myHTML += '<span class="fa fa-star-o"></span>';
+                  }
+                  wrapper.innerHTML = myHTML
+                </script>
+        </p>
+    {% else %}
+        <p>No restaurants are available.</p>
+    {% endif %}
+
+    <h2>Reviews</h2>
+    {% if reviews %}
+        {% for review in reviews%}
+            <div class="content">
+            <p><b>Usuari: </b>{{review.user.username}}</p>
+            <p><b>Missatge: </b>{{review.message}}</p>
+            <p><b>Rate:</b>
+                {% if review.rate == 0 %}
+                    <span class="fa fa-thumbs-down"></span>
+                {% else %}
+                    {% for i in 0|rjust:review.rate %}
+                        <span class="fa fa-star checked"></span>
+                    {% endfor %}
+                {% endif %}
+            </p>
+            </div>
+        {% endfor%}
+    {% else %}
+        <p>No hi ha cap review d'aquest restaurant.</p>
+    {% endif %}
+
+    <form action="{% url 'reviews'%}" method="get">
+         <button type="submit" name="review" value={{restaurants.restaurant_number}}> Afegeix una ressenya</button>
+    </form>
+{% endblock %}

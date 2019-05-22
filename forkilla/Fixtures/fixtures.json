@@ -1,0 +1,206 @@
+[
+  {
+    "model": "forkilla.Restaurant",
+    "pk": 1,
+    "fields": {
+      "restaurant_number": "09186777",
+      "name": "Only Tapas",
+      "menu_description" :"TAPAS",
+      "price_average" : "30",
+      "is_promot" : "False",
+      "rate" : "10",
+      "category" : "Medi",
+      "city": "Barcelona",
+      "address": "Les Rambles, 33",
+      "country": "Spain",
+      "capacity": 40
+    }
+  },
+   {
+    "model": "forkilla.Restaurant",
+    "pk": 2,
+    "fields": {
+      "restaurant_number": "09186666",
+      "name": "Only Pinxos",
+      "menu_description" :"PINXOS",
+      "price_average" : "130.33",
+      "is_promot" : "True",
+      "rate" : "9.6",
+      "category" : "Basq",
+      "city": "Barcelona",
+      "address": "Gran Via de les Corts Catalanes, 495",
+      "country": "Spain",
+      "capacity": 240
+    }
+  },
+  {
+    "model": "forkilla.Restaurant",
+    "pk": 3,
+    "fields": {
+      "restaurant_number": "09186775",
+      "name": "Only Carlas",
+      "menu_description" :"Carlas",
+      "price_average" : "250.45",
+      "is_promot" : "True",
+      "rate" : "10",
+      "category" : "Medi",
+      "city": "Torrelavit",
+      "address": "Tomato, 39",
+      "country": "Spain",
+      "capacity": 30
+    }
+  },
+  {
+    "model": "forkilla.Restaurant",
+    "pk": 4,
+    "fields": {
+      "restaurant_number": "09186778",
+      "name": "Papas Time",
+      "menu_description" :"Papas",
+      "price_average" : "10.33",
+      "is_promot" : "True",
+      "rate" : "6.3",
+      "category" : "Fusi",
+      "city": "Girona",
+      "address": "Carrer Girona, 333",
+      "country": "Spain",
+      "capacity": 45
+    }
+  },
+  {
+    "model": "forkilla.Restaurant",
+    "pk": 5,
+    "fields": {
+      "restaurant_number": "09186798",
+      "name": "Only Kebabs",
+      "menu_description" :"Kebab",
+      "price_average" : "4.55",
+      "is_promot" : "True",
+      "rate" : "6",
+      "category" : "Turk",
+      "city": "Manresa",
+      "address": "Carretera de Vic, 23",
+      "country": "Spain",
+      "capacity": 33
+    }
+  },
+  {
+    "model": "forkilla.Restaurant",
+    "pk": 6,
+    "fields": {
+      "restaurant_number": "09186457",
+      "name": "Mariscos Recio",
+      "menu_description" :"Marisco",
+      "price_average" : "30.50",
+      "is_promot" : "True",
+      "rate" : "8.3",
+      "category" : "Medi",
+      "city": "Lleida",
+      "address": "Carrer Puigberanger, 55",
+      "country": "Spain",
+      "capacity": 500
+    }
+  },
+  {
+    "model": "forkilla.Restaurant",
+    "pk": 7,
+    "fields": {
+      "restaurant_number": "09186437",
+      "name": "Crist Corpus",
+      "menu_description" :"Religios",
+      "price_average" : "13",
+      "is_promot" : "True",
+      "rate" : "9",
+      "category" : "Fusi",
+      "city": "Montserrat",
+      "address": "Montserrat, 1",
+      "country": "Spain",
+      "capacity": 999
+    }
+  },
+  {
+    "model": "forkilla.Restaurant",
+    "pk": 8,
+    "fields": {
+      "restaurant_number": "09236777",
+      "name": "TiosRush",
+      "menu_description" :"Tios",
+      "price_average" : "22.36",
+      "is_promot" : "True",
+      "rate" : "6.7",
+      "category" : "Medi",
+      "city": "Barcelona",
+      "address": "El carmelo, 666",
+      "country": "Spain",
+      "capacity": 40
+    }
+  },
+  {
+    "model": "forkilla.Restaurant",
+    "pk": 9,
+    "fields": {
+      "restaurant_number": "09169777",
+      "name": "Burger Kangreburger",
+      "menu_description" :"Hamburgueses",
+      "price_average" : "2.50",
+      "is_promot" : "True",
+      "rate" : "3",
+      "category" : "Medi",
+      "city": "Barcelona",
+      "address": "Avinguda Maritima, 2",
+      "country": "Spain",
+      "capacity": 444
+    }
+  },
+  {
+    "model": "forkilla.Restaurant",
+    "pk": 10,
+    "fields": {
+      "restaurant_number": "09148777",
+      "name": "Pinxos Picados",
+      "menu_description" :"PINXOS",
+      "price_average" : "200",
+      "is_promot" : "True",
+      "rate" : "10",
+      "category" : "Basq",
+      "city": "Barcelona",
+      "address": "Gran Vda,5",
+      "country": "Spain",
+      "capacity": 240
+    }
+  },
+  {
+    "model": "forkilla.Restaurant",
+    "pk":11,
+    "fields": {
+      "restaurant_number": "09142777",
+      "name": "Quesadillas",
+      "menu_description" :"Quesadillas",
+      "price_average" : "0.5",
+      "is_promot" : "True",
+      "rate" : "7.77",
+      "category" : "Mexi",
+      "city": "Girona",
+      "address": "Gran Via , 95",
+      "country": "Spain",
+      "capacity": 345
+    }
+  },
+  {
+    "model": "forkilla.Restaurant",
+    "pk": 12,
+    "fields": {
+      "restaurant_number": "09176977",
+      "name": "Oreo",
+      "menu_description" :"Oreos",
+      "price_average" : "5.33",
+      "is_promot" : "True",
+      "rate" : "2.2",
+      "category" : "Basq",
+      "city": "Manresa",
+      "address": "Gaudi, 45",
+      "country": "Spain",
+      "capacity": 24
+    }
+  }
+]

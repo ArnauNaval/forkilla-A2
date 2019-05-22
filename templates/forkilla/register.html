@@ -1,0 +1,20 @@
+{% load static %}
+<header>
+    <link rel="stylesheet" href="{% static '/css/login.css' %}">
+    <title>Register</title>
+</header>
+
+<div class="back">
+    <a href="{% url 'login'  %}"> Back </a>
+</div>
+<div class="contentReg">
+    {% block content %}
+      <h1>Create an account</h1>
+
+      <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+          <p style="text-align: center"><input class="button" type="submit" value="Create the account"></p>
+      </form>
+    {% endblock %}
+</div>

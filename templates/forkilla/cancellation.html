@@ -1,0 +1,18 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Cancel·lacio de reserves</title>
+</head>
+
+{% extends "forkilla/base.html" %}
+
+{% block content %}
+    <h2>Cancel·lacio de reserva</h2>
+    <p>
+        Hola {{ username }},
+    </p>
+    <p>
+        Lamentem informar-te de que la reserva al restaurant <b>{{ reserva.restaurant.name }}</b>
+        pel dia <b>{{ reserva.day }}</b> a les <b>{{ reserva.get_human_slot }}</b> ha estat cancelada :(
+    </p>
+
+{% endblock %}

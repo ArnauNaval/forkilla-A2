@@ -1,0 +1,17 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Reserva realitzada</title>
+</head>
+{% extends "forkilla/base.html" %}
+
+{% block content %}
+
+    {% if restaurant %}
+        <h2>S'ha fet una reserva al restaurant {{ restaurant.name}}</h2>
+        <p><h><b>Dia: </b>{{day}}</h></p>
+        <p><h><b>Hora: </b>{{time}}</h></p>
+        <p><h><b>Numero de persones: </b>{{people}}</h></p>
+    {% endif %}
+
+
+{% endblock %}

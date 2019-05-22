@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static '/css/forkilla.css' %}">
+</head>
+
+<body>
+
+<div class="row header">
+
+    <div class="column home" style="text-align:left">
+        <a href="{% url 'restaurants' %}" class="fa fa-home"></a>
+    </div>
+
+    <div class="column cerca">
+        <form action="{% url 'restaurants'%}" method="get">
+            <input name="city" type="text" placeholder="Busca per ciutat...">
+            <button type="submit"> <a class="fa fa-search"></a></button>
+        </form>
+    </div>
+
+    {% if not logged %}
+    <div class="column">
+
+    </div>
+    <div class="column" style="text-align:right">
+        <b><a href="{%url 'login' %}?next={{next_url}}"> login </a></b>
+    </div>
+    {% else %}
+    <div class="column" style="text-align:right">
+        {{ username }} <b><a href="{%url 'logout' %}"> logout </a></b>
+    </div>
+    {% endif %}
+
+</div>
+
+
+<div class="mainContent">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<hr>
+<div class="mainContent">
+    <h2>Your last viewed Restaurants:</h2>
+     <form action="{% url 'reservation'%}" method="get">
+        {% csrf_token %}
+
+        {% for restaurant in viewedrestaurants.restaurant.all|slice:":5:-1"%}
+        <a href="{% url 'restaurant' restaurant.restaurant_number%}"> {{restaurant.name}} </a> : {{restaurant.menu_description}}
+        <button type="submit" name="reservation" value={{restaurant.restaurant_number}}> Reserva</button>
+        <br>
+
+        {% endfor %}
+     </form>
+</div>
+</body>
+</html>

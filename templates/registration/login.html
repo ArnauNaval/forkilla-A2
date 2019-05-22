@@ -1,0 +1,39 @@
+{% load static %}
+<header>
+    <link rel="stylesheet" href="{% static '/css/login.css' %}">
+    <title>LogIn</title>
+</header>
+<div class="back">
+    <a href="{% url 'restaurants'  %}"> Back </a>
+</div>
+
+{% block content %}
+
+<div class="content">
+    {% if form.errors %}
+    <p class="error">Sorry, that's not a valid username or password</p>
+    {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>
+            <b><label for="username">User name:</label></b>
+            <input type="text" name="username" value="" id="username">
+        </p>
+
+        <b>
+            <label for="password">Password:</label></b>
+            <input type="password" name="password" value="" id="password">
+            <input type="hidden" name="next" value="{{ next|escape }}" />
+
+        <p style="text-align: center;">
+            <input class="button" type="submit" value="login" />
+        </p>
+
+    </form>
+
+
+    <a href="{%url 'register' %}"> register </a>
+
+</div>
+{% endblock %}
