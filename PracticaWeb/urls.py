@@ -27,7 +27,7 @@ from forkilla import views
 
 
 router = routers.DefaultRouter()
-router.register(r'restaurants', views.RestaurantViewSet, basename='api')
+router.register(r'restaurants', views.RestaurantViewSet)
 router.register(r'reviews', views.ReviewViewSet)
 
 

@@ -354,7 +354,7 @@ class RestaurantViewSet(viewsets.ModelViewSet):
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,
                           IsOwnerOrReadOnly,)
     serializer_class = RestaurantSerializer
-    #queryset = Restaurant.objects.all()
+    queryset = Restaurant.objects.all()
 
     def get_queryset(self):
         """
