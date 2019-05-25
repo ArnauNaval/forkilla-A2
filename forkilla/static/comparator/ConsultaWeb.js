@@ -3,8 +3,8 @@ function buscar(ip){
 	var category = $("#category" ).val();
 	var price = $("#price" ).val();
 
-	//url = 'http://'+ ip + ':8000/api/restaurants/?';
-	url = 'api/restaurants/?';
+	url = 'http://'+ ip + ':8000/api/restaurants/?';
+	//url = 'api/restaurants/?';
 	url += (category)? 'category='+category : '';
 
 	url += (city)? '&city='+city : '';
