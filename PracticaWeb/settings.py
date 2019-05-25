@@ -154,9 +154,9 @@ LOGIN_REDIRECT_URL = '/restaurants/'
 
 django_heroku.settings(locals())
 
-#try:
-#    from forkilla.local_settings import *
-#except ImportError:
-  #  # No local settings was found, skipping.
- #   pass
 
+try:
+    from forkilla.local_settings import *
+except ImportError:
+    # No local settings was found, skipping.
+    pass

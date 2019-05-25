@@ -4,7 +4,7 @@ function buscar(ip){
 	var price = $("#price" ).val();
 
 	//url = 'http://'+ ip + ':8000/api/restaurants/?';
-	url = 'https:sd2019-forkilla-a2.herokuapp.com/api/restaurants/';
+	url = 'api/restaurants/?';
 	url += (category)? 'category='+category : '';
 
 	url += (city)? '&city='+city : '';
