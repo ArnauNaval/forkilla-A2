@@ -47,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/forkilla/static/comparator/ConsultaWeb.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="110">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -226,12 +226,12 @@
       <updated>1558775892524</updated>
       <workItem from="1558775895131" duration="6016000" />
       <workItem from="1558789043957" duration="7908000" />
-      <workItem from="1558799892334" duration="736000" />
+      <workItem from="1558799892334" duration="1397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14660000" />
+    <option name="totallyTimeSpent" value="15321000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
@@ -338,7 +338,7 @@
     <entry file="file://$PROJECT_DIR$/forkilla/static/comparator/ConsultaWeb.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
         </state>
       </provider>
     </entry>
