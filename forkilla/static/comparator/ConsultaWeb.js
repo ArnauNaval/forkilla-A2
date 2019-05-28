@@ -14,25 +14,29 @@ function buscar(ip){
 
 
 	$.getJSON( url, function( data ) {
-	  var items = [];
-
+		var items = [];
 
 		items.push( "<p>For " + ip + ":</p>" );
-	  for (var i=0; i < data["count"] ; i++ )
-	  {
-	  	items.push( "<p><b> -Adress</b>: " + data["results"][i]["address"] + "</p>" );
-	  	items.push( "<p><b> -Capacity</b>: " + data["results"][i]["capacity"] + "</p>" );
-	  	items.push( "<p><b> -Category</b>: " + data["results"][i]["category"] + "</p>" );
-	  	items.push( "<p><b> -City</b>: " + data["results"][i]["city"] + "</p>" );
-	  	items.push( "<p><b> -Country</b>: " + data["results"][i]["country"] + "</p>" );
-	  	items.push( "<p><b> -Description</b>: " + data["results"][i]["menu_description"] + "</p>" );
-	  	items.push( "<p><b> -Name</b>: " + data["results"][i]["name"] + "</p>" );
-	  	items.push( "<p><b> -Price average</b>: " + data["results"][i]["price_average"] + "</p>" );
-	  	items.push( "<p><b> -Rate</b>: " + data["results"][i]["rate"] + "</p>" );
+		if(data["count"] == 0){
+			items.push("<p>There is no data with this specifications</p>")
+			items.push( "-------------" );
+		}
+		else{
+			for (var i=0; i < data["count"] ; i++ ){
+				items.push( "<p><b> -Adress</b>: " + data["results"][i]["address"] + "</p>" );
+				items.push( "<p><b> -Capacity</b>: " + data["results"][i]["capacity"] + "</p>" );
+				items.push( "<p><b> -Category</b>: " + data["results"][i]["category"] + "</p>" );
+				items.push( "<p><b> -City</b>: " + data["results"][i]["city"] + "</p>" );
+				items.push( "<p><b> -Country</b>: " + data["results"][i]["country"] + "</p>" );
+				items.push( "<p><b> -Description</b>: " + data["results"][i]["menu_description"] + "</p>" );
+				items.push( "<p><b> -Name</b>: " + data["results"][i]["name"] + "</p>" );
+				items.push( "<p><b> -Price average</b>: " + data["results"][i]["price_average"] + "</p>" );
+				items.push( "<p><b> -Rate</b>: " + data["results"][i]["rate"] + "</p>" );
 
-	  	items.push( "-------------" );
+				items.push( "-------------" );
+			}
+		}
 
-	  }
 	  //$('#Results').remove();
 
 	  $( "<div/>", {
@@ -51,7 +55,7 @@ function comparar(){
 	ips = ips.replace(/'/g, '');
 
 	ips = ips.split(',');
-	
+
 	ips.forEach(function (arrayItem) {
 		arrayItem = arrayItem.replace(' ', '');
 		buscar(arrayItem);
