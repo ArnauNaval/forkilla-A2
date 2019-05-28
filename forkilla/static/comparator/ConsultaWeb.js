@@ -14,8 +14,8 @@ function buscar(ip){
 
 
 	$.getJSON( url, function( data ) {
-		data = _.sortBy( data, 'price_average' );
 		var items = [];
+		var tmp = [];
 
 		items.push( "<p>For " + ip + ":</p>" );
 		if(data["count"] == 0){
@@ -24,21 +24,34 @@ function buscar(ip){
 		}
 		else{
 			for (var i=0; i < data["count"] ; i++ ){
-				items.push( "<p><b> -Adress</b>: " + data["results"][i]["address"] + "</p>" );
-				items.push( "<p><b> -Capacity</b>: " + data["results"][i]["capacity"] + "</p>" );
-				items.push( "<p><b> -Category</b>: " + data["results"][i]["category"] + "</p>" );
-				items.push( "<p><b> -City</b>: " + data["results"][i]["city"] + "</p>" );
-				items.push( "<p><b> -Country</b>: " + data["results"][i]["country"] + "</p>" );
-				items.push( "<p><b> -Description</b>: " + data["results"][i]["menu_description"] + "</p>" );
-				items.push( "<p><b> -Name</b>: " + data["results"][i]["name"] + "</p>" );
-				items.push( "<p><b> -Price average</b>: " + data["results"][i]["price_average"] + "</p>" );
-				items.push( "<p><b> -Rate</b>: " + data["results"][i]["rate"] + "</p>" );
+				var nose = [];
 
-				items.push( "-------------" );
+				nose.push( "<p><b> -Adress</b>: " + data["results"][i]["address"] + "</p>" );
+				nose.push( "<p><b> -Capacity</b>: " + data["results"][i]["capacity"] + "</p>" );
+				nose.push( "<p><b> -Category</b>: " + data["results"][i]["category"] + "</p>" );
+				nose.push( "<p><b> -City</b>: " + data["results"][i]["city"] + "</p>" );
+				nose.push( "<p><b> -Country</b>: " + data["results"][i]["country"] + "</p>" );
+				nose.push( "<p><b> -Description</b>: " + data["results"][i]["menu_description"] + "</p>" );
+				nose.push( "<p><b> -Name</b>: " + data["results"][i]["name"] + "</p>" );
+				nose.push( "<p><b> -Price average</b>: " + data["results"][i]["price_average"] + "</p>" );
+				nose.push( "<p><b> -Rate</b>: " + data["results"][i]["rate"] + "</p>" );
+
+				nose.push( "-------------" );
+
+				tmp.push([parseInt(data["results"][i]["price_average"]), nose]);
 			}
 		}
 
-	  //$('#Results').remove();
+		tmp.sort(Comparator);
+
+		for(var i = 0; i<tmp.length; i++)
+		{
+			for(var j=0; j<tmp[0][1].length; j++)
+			{
+				items.push(tmp[i][1][j]);
+			}
+		}
+
 
 	  $( "<div/>", {
 	    html: items.join( "" ),
@@ -46,6 +59,13 @@ function buscar(ip){
 	  }).appendTo( "body" );
 	});
 }
+
+function Comparator(a, b) {
+   if (a[0] < b[0]) return -1;
+   if (a[0] > b[0]) return 1;
+   return 0;
+ }
+
 
 function comparar(){
 	var ips = $('#ips').text();
@@ -56,10 +76,6 @@ function comparar(){
 	ips = ips.replace(/'/g, '');
 
 	ips = ips.split(',');
-
-	while($('#Results').length>0){
-		$('#Results').remove();
-	}
 
 	ips.forEach(function (arrayItem) {
 		arrayItem = arrayItem.replace(' ', '');
