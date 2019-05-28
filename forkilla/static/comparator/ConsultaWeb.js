@@ -14,6 +14,7 @@ function buscar(ip){
 
 
 	$.getJSON( url, function( data ) {
+		data = _.sortBy( data, 'price_average' );
 		var items = [];
 
 		items.push( "<p>For " + ip + ":</p>" );
@@ -55,6 +56,10 @@ function comparar(){
 	ips = ips.replace(/'/g, '');
 
 	ips = ips.split(',');
+
+	while($('#Results').length>0){
+		$('#Results').remove();
+	}
 
 	ips.forEach(function (arrayItem) {
 		arrayItem = arrayItem.replace(' ', '');

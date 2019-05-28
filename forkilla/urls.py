@@ -2,7 +2,7 @@ from django.conf.urls import url
 
 from . import views
 
-listOfAddresses = ["sd2019-forkilla-a2","sd2019-forkilla-a6","sd2019-f4-forkilla"]
+listOfAddresses = ["sd2019-forkilla-a2","sd2019-f8-forkilla","sd2019-forkillaa7","sd2019-forkillaa9","sd2019-forkillab2","sd2019-forkillab8","sd2019-forkillab9","sd2019-forkillab11","sd2019-f2-forkilla","sd2019-forkillaf6","sd2019-forkillaf11","sd2019-forkilla-a6","sd2019-f4-forkilla", "sd2019-forkilla-b5", "sd2019-forkilla-b6"]
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),

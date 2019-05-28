@@ -33,7 +33,7 @@
     </div>
     {% else %}
     <div class="column" style="text-align:right">
-        {{ username }} <b><a href="{%url 'logout' %}"> logout </a></b>
+        <b><a href="{% url 'reservationlist'%}" >{{ username }} </a></b><b><a href="{%url 'logout' %}" class="fa fa-sign-out"> </a></b>
     </div>
     {% endif %}
 

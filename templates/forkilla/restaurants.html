@@ -18,9 +18,9 @@
     -->
 
     {% if restaurants %}
-        {% if promoted %}
-            <h2>All restaurants</h2>
-        {% endif %}
+
+        <h2>All restaurants</h2>
+
         <ul>
 
         <form action="{% url 'reservation'%}" method="get">
@@ -36,7 +36,5 @@
     {% else %}
         <p>No restaurants are available.</p>
     {% endif %}
-    <form action="{% url 'reservationlist'%}" method="get">
-         <button type="submit" name="review"> Veure les meves reserves</button>
-    </form>
+
 {% endblock %}
