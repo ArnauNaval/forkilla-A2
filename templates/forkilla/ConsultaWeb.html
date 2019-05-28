@@ -16,11 +16,10 @@
 		<div>
 			Maximum price: <input type="text" id="price">
 		</div>
-        {% for ip in ips %}
-            <div>
-			    <button onclick="javascript:buscar('{{ ip }}')">BUSCAR {{ ip }}</button>
-		    </div>
-        {% endfor %}
+
+        <div id="ips" style="visibility: hidden"> {{ ips }}</div>
+
+        <button onclick="javascript:comparar()">COMPARE</button>
 
 
 
