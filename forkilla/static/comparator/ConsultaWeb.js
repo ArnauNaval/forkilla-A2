@@ -77,6 +77,10 @@ function comparar(){
 
 	ips = ips.split(',');
 
+	while($('#Results').length>0){
+		$('#Results').remove();
+	}
+
 	ips.forEach(function (arrayItem) {
 		arrayItem = arrayItem.replace(' ', '');
 		buscar(arrayItem);
