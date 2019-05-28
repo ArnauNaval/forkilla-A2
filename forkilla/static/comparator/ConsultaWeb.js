@@ -2,7 +2,7 @@ function buscar(ip){
 	var city = $("#city" ).val();
 	var category = $("#category" ).val();
 	var price = $("#price" ).val();
-	alert('Crea');
+
 	//url = 'http://'+ ip + ':8000/api/restaurants/?';
 
 	url = 'https://' + ip + '.herokuapp.com/api/restaurants/?';
@@ -12,7 +12,6 @@ function buscar(ip){
 
 	url += (price)? '&price_average='+price : '';
 
-	alert('escriu');
 
 	$.getJSON( url, function( data ) {
 	  var items = [];
@@ -34,17 +33,13 @@ function buscar(ip){
 	  	items.push( "-------------" );
 
 	  }
-	  $('#Results').remove();
+	  //$('#Results').remove();
 
 	  $( "<div/>", {
 	    html: items.join( "" ),
 		id: "Results"
 	  }).appendTo( "body" );
 	});
-}
-
-function test(c) {
-	alert(c);
 }
 
 function comparar(){
@@ -55,11 +50,9 @@ function comparar(){
 
 	ips = ips.replace(/'/g, '');
 
-
 	ips = ips.split(',');
-	alert('ips: ' + ips);
+	
 	ips.forEach(function (arrayItem) {
-		alert('Consulta: '+ arrayItem);
 		arrayItem = arrayItem.replace(' ', '');
 		buscar(arrayItem);
 	});

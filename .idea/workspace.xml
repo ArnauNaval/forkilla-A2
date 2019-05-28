@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9577b7e-385b-465c-9e41-d33c5c735415" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forkilla/static/comparator/ConsultaWeb.js" beforeDir="false" afterPath="$PROJECT_DIR$/forkilla/static/comparator/ConsultaWeb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forkilla/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/forkilla/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/forkilla/ConsultaWeb.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forkilla/ConsultaWeb.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,8 +60,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/forkilla/static/comparator/ConsultaWeb.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state relative-caret-position="308">
+              <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -244,12 +240,12 @@
       <workItem from="1558789043957" duration="7908000" />
       <workItem from="1558799892334" duration="1713000" />
       <workItem from="1558810199205" duration="1377000" />
-      <workItem from="1559039746629" duration="3486000" />
+      <workItem from="1559039746629" duration="4018000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20500000" />
+    <option name="totallyTimeSpent" value="21032000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
@@ -371,8 +367,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/forkilla/static/comparator/ConsultaWeb.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        <state relative-caret-position="308">
+          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
         </state>
       </provider>
     </entry>
