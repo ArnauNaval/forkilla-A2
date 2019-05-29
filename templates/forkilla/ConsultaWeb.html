@@ -1,27 +1,25 @@
-<!DOCTYPE HTML>
+{% extends "forkilla/base.html" %}
 
-<html>
-	<head>
+{% block content %}
+
+    <head>
         {% load static %}
-		<script src="{% static 'comparator/jquery-3.4.1.min.js' %}"></script>
-		<script src="{% static 'comparator/ConsultaWeb.js' %}"></script>
-	</head>
-	<body>
-		<div>
-			City: <input type="text" id="city">
-		</div>
-		<div>
-			Category: <input type="text" id="category">
-		</div>
-		<div>
-			Maximum price: <input type="text" id="price">
-		</div>
+        <script src="{% static 'comparator/jquery-3.4.1.min.js' %}"></script>
+        <script src="{% static 'comparator/ConsultaWeb.js' %}"></script>
+    </head>
 
-        <div id="ips" style="visibility: hidden"> {{ ips }}</div>
+    <div>
+        City: <input type="text" id="city">
+    </div>
+    <div>
+        Category: <input type="text" id="category">
+    </div>
+    <div>
+        Maximum price: <input type="text" id="price">
+    </div>
 
-        <button onclick="javascript:comparar()">COMPARE</button>
+    <div id="ips" hidden="hidden"> {{ ips }}</div>
 
+    <button onclick="javascript:comparar()">COMPARE</button>
 
-
-	</body>
-</html>
+{% endblock %}
