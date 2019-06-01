@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PracticaWeb/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="e#316#325#0" expanded="true" />
               </folding>
@@ -30,7 +30,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/forkilla/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
+            <state relative-caret-position="165">
               <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
             </state>
           </provider>
@@ -39,7 +39,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/forkilla/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
+            <state relative-caret-position="30">
               <caret line="4" selection-start-line="4" selection-end-line="5" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -51,7 +51,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PracticaWeb/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
+            <state relative-caret-position="540">
               <caret line="46" column="21" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="21" />
             </state>
           </provider>
@@ -240,17 +240,17 @@
       <workItem from="1559400476550" duration="77000" />
       <workItem from="1559412753020" duration="125000" />
       <workItem from="1559413204945" duration="132000" />
+      <workItem from="1559413867367" duration="154000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52754000" />
+    <option name="totallyTimeSpent" value="52908000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="17" width="1280" height="782" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27659574" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28119937" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -409,8 +409,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PracticaWeb/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="e#316#325#0" expanded="true" />
           </folding>
@@ -419,14 +419,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/forkilla/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
+        <state relative-caret-position="165">
           <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/forkilla/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
+        <state relative-caret-position="30">
           <caret line="4" selection-start-line="4" selection-end-line="5" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -436,7 +436,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PracticaWeb/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
+        <state relative-caret-position="540">
           <caret line="46" column="21" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="21" />
         </state>
       </provider>
