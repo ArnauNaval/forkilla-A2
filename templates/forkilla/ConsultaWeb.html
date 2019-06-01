@@ -7,19 +7,20 @@
         <script src="{% static 'comparator/jquery-3.4.1.min.js' %}"></script>
         <script src="{% static 'comparator/ConsultaWeb.js' %}"></script>
     </head>
-
-    <div>
+    <h2>Comparator</h2>
+    <div style="margin: 10px;">
         City: <input type="text" id="city">
     </div>
-    <div>
+    <div style="margin: 10px;">
         Category: <input type="text" id="category">
     </div>
-    <div>
+    <div style="margin: 10px;">
         Maximum price: <input type="text" id="price">
     </div>
 
     <div id="ips" hidden="hidden"> {{ ips }}</div>
 
-    <button onclick="javascript:comparar()">COMPARE</button>
+    <button style="margin: 10px;" onclick="javascript:comparar()">GET ALL</button>
 
+    <button style="margin: 10px;" onclick="javascript:cheapest()">GET THE CHEAPEST</button>
 {% endblock %}

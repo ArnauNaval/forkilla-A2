@@ -341,7 +341,10 @@ def reviewBefore(request):
 
 def comparator(request,ips):
     context = {
-        'ips':ips
+        'ips':ips,
+        'logged': request.user.is_authenticated(),
+        'username': request.user.username,
+        'viewedrestaurants': _check_session(request),
     }
     return render(request, 'forkilla/ConsultaWeb.html',context)
 

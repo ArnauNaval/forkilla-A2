@@ -3,8 +3,6 @@ function buscar(ip){
 	var category = $("#category" ).val();
 	var price = $("#price" ).val();
 
-	//url = 'http://'+ ip + ':8000/api/restaurants/?';
-
 	url = 'https://' + ip + '.herokuapp.com/api/restaurants/?';
 	url += (category)? 'category='+category : '';
 
@@ -17,16 +15,15 @@ function buscar(ip){
 		var items = [];
 		var tmp = [];
 
-		items.push( "<p>For " + ip + ":</p>" );
+		items.push( "<h2>For " + ip + ":</h2>" );
 		if(data["count"] == 0){
 			items.push("<p>There is no data with this specifications</p>")
-			items.push( "-------------" );
 		}
 		else{
 			for (var i=0; i < data["count"] ; i++ ){
 				var nose = [];
 
-				nose.push( "<p><b> -Adress</b>: " + data["results"][i]["address"] + "</p>" );
+				nose.push( "<div class='content'><p><b> -Adress</b>: " + data["results"][i]["address"] + "</p>" );
 				nose.push( "<p><b> -Capacity</b>: " + data["results"][i]["capacity"] + "</p>" );
 				nose.push( "<p><b> -Category</b>: " + data["results"][i]["category"] + "</p>" );
 				nose.push( "<p><b> -City</b>: " + data["results"][i]["city"] + "</p>" );
@@ -34,9 +31,8 @@ function buscar(ip){
 				nose.push( "<p><b> -Description</b>: " + data["results"][i]["menu_description"] + "</p>" );
 				nose.push( "<p><b> -Name</b>: " + data["results"][i]["name"] + "</p>" );
 				nose.push( "<p><b> -Price average</b>: " + data["results"][i]["price_average"] + "</p>" );
-				nose.push( "<p><b> -Rate</b>: " + data["results"][i]["rate"] + "</p>" );
+				nose.push( "<p><b> -Rate</b>: " + data["results"][i]["rate"] + "</p></div>" );
 
-				nose.push( "-------------" );
 
 				tmp.push([parseInt(data["results"][i]["price_average"]), nose]);
 			}
@@ -55,6 +51,7 @@ function buscar(ip){
 
 	  $( "<div/>", {
 	    html: items.join( "" ),
+		class: "mainContent",
 		id: "Results"
 	  }).appendTo( "body" );
 	});
@@ -68,6 +65,8 @@ function Comparator(a, b) {
 
 
 function comparar(){
+	document.body.innerHTML += '<hr>'
+
 	var ips = $('#ips').text();
 
 	ips = ips.slice(2, ips.length);
@@ -85,4 +84,9 @@ function comparar(){
 		arrayItem = arrayItem.replace(' ', '');
 		buscar(arrayItem);
 	});
+
+}
+
+function cheapest(){
+	alert("Nouse fer");
 }

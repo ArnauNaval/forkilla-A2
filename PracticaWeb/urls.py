@@ -34,6 +34,8 @@ router.register(r'reviews', views.ReviewViewSet)
 handler404 = views.error_404
 handler500 = views.error_500
 
+listOfAddresses = ["sd2019-forkilla-a2","sd2019-f8-forkilla","sd2019-forkillaa7","sd2019-forkillaa9","sd2019-forkillab2","sd2019-forkillab8","sd2019-forkillab9","sd2019-forkillab11","sd2019-f2-forkilla","sd2019-forkillaf6","sd2019-forkillaf11","sd2019-forkilla-a6","sd2019-f4-forkilla", "sd2019-forkilla-b5", "sd2019-forkilla-b6"]
+
 urlpatterns = [
     url(r'^forkilla/', include('forkilla.urls')),
     url(r'^admin/', admin.site.urls),
@@ -42,6 +44,6 @@ urlpatterns = [
     url(r'^accounts/logout/$',  logout,  {'next_page': '/'}, name='logout'),
     url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-
+    url(r'^comparator$', views.comparator, {'ips': listOfAddresses}),
 ]
 print(router.urls)
