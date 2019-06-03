@@ -1,4 +1,8 @@
 
+@font-face {
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+}
+
 button{
     border-radius: 10px;
     background-color: lightskyblue;
