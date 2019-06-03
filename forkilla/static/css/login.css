@@ -1,4 +1,8 @@
 
+@font-face {
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+}
+
 body{
     background-color: aliceblue;
     font-family: "Roboto Condensed";
