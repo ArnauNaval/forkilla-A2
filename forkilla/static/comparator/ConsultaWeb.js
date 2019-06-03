@@ -22,14 +22,13 @@ function buscar(ip){
 		else{
 			for (var i=0; i < data["count"] ; i++ ){
 				var nose = [];
+				var url = "https://" + ip + ".herokuapp.com/reservation/?reservation="+data["results"][i]["restaurant_number"];
 
-				nose.push( "<div class='content'><p><b> -Adress</b>: " + data["results"][i]["address"] + "</p>" );
+				nose.push( "<div class='content'><p><u><a href="+ url +">" + data["results"][i]["name"] + "</a></u></p>" );
+				nose.push( "<p><b> -Adress</b>: " + data["results"][i]["address"] + " (" + data["results"][i]["city"] + ", " + data["results"][i]["country"] + ")</p>" );
 				nose.push( "<p><b> -Capacity</b>: " + data["results"][i]["capacity"] + "</p>" );
 				nose.push( "<p><b> -Category</b>: " + data["results"][i]["category"] + "</p>" );
-				nose.push( "<p><b> -City</b>: " + data["results"][i]["city"] + "</p>" );
-				nose.push( "<p><b> -Country</b>: " + data["results"][i]["country"] + "</p>" );
 				nose.push( "<p><b> -Description</b>: " + data["results"][i]["menu_description"] + "</p>" );
-				nose.push( "<p><b> -Name</b>: " + data["results"][i]["name"] + "</p>" );
 				nose.push( "<p><b> -Price average</b>: " + data["results"][i]["price_average"] + "</p>" );
 				nose.push( "<p><b> -Rate</b>: " + data["results"][i]["rate"] + "</p></div>" );
 
@@ -85,19 +84,17 @@ function buscarCheapest(ips){
 
 				for (var i=0; i < data["count"] ; i++ ){
 					var nose = [];
-
+					var url = "https://" + ip + ".herokuapp.com/reservation/?reservation="+data["results"][i]["restaurant_number"];
 					if(parseInt(data["results"][i]["price_average"]) < tmp[0][0])
 					{
 
 						tmp.pop();
 
-						nose.push( "<div class='content'><p><b> -Adress</b>: " + data["results"][i]["address"] + "</p>" );
+						nose.push( "<div class='content'><p><u><a href="+ url +">" + data["results"][i]["name"] + "</a></u></p>" );
+						nose.push( "<p><b> -Adress</b>: " + data["results"][i]["address"] + " (" + data["results"][i]["city"] + ", " + data["results"][i]["country"] + ")</p>" );
 						nose.push( "<p><b> -Capacity</b>: " + data["results"][i]["capacity"] + "</p>" );
 						nose.push( "<p><b> -Category</b>: " + data["results"][i]["category"] + "</p>" );
-						nose.push( "<p><b> -City</b>: " + data["results"][i]["city"] + "</p>" );
-						nose.push( "<p><b> -Country</b>: " + data["results"][i]["country"] + "</p>" );
 						nose.push( "<p><b> -Description</b>: " + data["results"][i]["menu_description"] + "</p>" );
-						nose.push( "<p><b> -Name</b>: " + data["results"][i]["name"] + "</p>" );
 						nose.push( "<p><b> -Price average</b>: " + data["results"][i]["price_average"] + "</p>" );
 						nose.push( "<p><b> -Rate</b>: " + data["results"][i]["rate"] + "</p></div>" );
 
@@ -155,6 +152,8 @@ function comparar(){
 }
 
 function cheapest(){
+	alert("Aixo pot tardar uns segons, sigues pacient");
+
 	var ips = $('#ips').text();
 
 	ips = ips.slice(2, ips.length);
@@ -169,4 +168,5 @@ function cheapest(){
 	}
 
 	buscarCheapest(ips);
+
 }
